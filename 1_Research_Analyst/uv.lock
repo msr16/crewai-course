@@ -11,6 +11,7 @@ name = "1-research-analyst"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "colorama" },
     { name = "crewai" },
     { name = "crewai-tools" },
     { name = "python-dotenv" },
@@ -19,6 +20,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "colorama", specifier = ">=0.4.6" },
     { name = "crewai", specifier = ">=0.203.1" },
     { name = "crewai-tools", specifier = ">=0.76.0" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
