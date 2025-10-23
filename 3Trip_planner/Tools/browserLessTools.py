@@ -14,7 +14,7 @@ import os
 class WebsiteInput(BaseModel):
     website: str = Field(..., description="The website URL to scrape")
 
-class BrowserTools: #(BaseTool):
+class BrowserTools(BaseTool):
     name: str = "Scrape website content"
     description: str = "Useful to scrape and summarize a website content"
     args_schema: type[BaseModel] = WebsiteInput
