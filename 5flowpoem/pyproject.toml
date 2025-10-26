@@ -1,0 +1,40 @@
+[project]
+name = "5flowpoem"
+version = "0.1.0"
+description = "5FlowPoem using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai-tools>=0.76.0",
+    "crewai[tools]>=0.203.1,<1.0.0",
+    "fastapi>=0.109.0",
+    "langchain>=1.0.2",
+    "langchain-community>=0.4",
+    "langchain-core>=1.0.1",
+    "langchain-google-genai>=3.0.0",
+    "langchain-groq>=1.0.0",
+    "langchain-openai>=0.0.5",
+    "mem0ai>=1.0.0",
+    "openai>=1.6.1",
+    "pydantic>=2.10",
+    "pyowm>=3.3.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "streamlit>=1.29.0",
+    "tools>=0.1.9",
+    "unstructured>=0.11.0",
+    "uvicorn>=0.27.0",
+]
+
+[project.scripts]
+kickoff = "5flowpoem.main:kickoff"
+run_crew = "5flowpoem.main:kickoff"
+plot = "5flowpoem.main:plot"
+run_with_trigger = "5flowpoem.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "flow"
